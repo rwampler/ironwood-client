@@ -1,0 +1,70 @@
+
+$primary-color: #ff7f00
+$primary-bg-color: darken(#ff7f00, 5%)
+
+$primary-dark-color: darken($primary-color, 10%)
+
+
+@keyframes spin
+  100%
+    transform: rotate(-360deg)
+
+html
+  font-size: 12px
+  overflow-y: hidden
+
+body
+  background-color: #111111
+  box-sizing: border-box
+  color: $primary-color
+  font-size: 12px
+  margin: 0
+  padding: 0
+
+.fps-meter
+  left: unset !important
+  right: 0 !important
+
+a
+  color: $primary-color
+
+  &:hover
+    color: lighten($primary-color, 15%)
+
+  &:active
+    color: #ffffff
+
+
+.button
+  background-color: transparent
+  border: 1px solid $primary-color
+  color: $primary-color
+
+  &:not([disabled])
+    &:hover
+      background-color: $primary-dark-color
+      color: $primary-bg-color
+
+    &:active
+      background-color: $primary-color
+      color: $primary-bg-color
+
+  &.is-ironwood
+    background-color: $primary-color
+    color: #000
+    font-weight: bold
+    letter-spacing: .125rem
+    text-transform: uppercase
+
+    &:not([disabled])
+      &:hover
+        background-color: $primary-dark-color
+        color: #111
+
+      &:active
+        background-color: $primary-color
+        color: #111
+
+      &:focus
+        border-color: $primary-color
+        box-shadow: 0 0 0 0.0625em rgba(255, 127, 0, .5)
